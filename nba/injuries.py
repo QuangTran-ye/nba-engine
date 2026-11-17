@@ -348,7 +348,10 @@ def injury_features(ent=None, ch=None, sched=None):
         g.columns = [f"{s}_{tag}_{k}" for k, s in g.columns]
         rows.append(g)
     f = pd.concat(rows, axis=1)
-    f = ch.set_index("game_id").join(f).fillna({c: 0.0 for c in f.columns})
+    # a status with no entries on one side (e.g. no home Doubtful tonight) must still exist as zeros
+    cols = [f"{s}_{tag}_{k}" for tag in ("out", "doubt", "quest") for s in ("h", "a") for k in ("gs", "mn")]
+    f = f.reindex(columns=cols, fill_value=0.0)
+    f = ch.set_index("game_id").join(f).fillna({c: 0.0 for c in cols})
     f["inj_known"] = f.published.notna().astype(int)
     f = f.rename(columns={"published": "inj_published"})
     for side in ("h", "a"):
