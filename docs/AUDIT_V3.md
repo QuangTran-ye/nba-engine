@@ -30,7 +30,7 @@ Dependencies: pandas, numpy, scikit-learn, LightGBM, SciPy, matplotlib, nba_api,
 | Kaggle/SBR odds | 2007-08 → 2025-26 spreads/totals; ML to Jan 2023 | **none**; validated as closing (0.27-pt mean gap to DK close vs 1.73 to open) |
 | ESPN core odds | 2022-23 → today; 14 providers cached raw, **only DraftKings ingested** | close = at tip; open = time unknown; 2022-23 single line |
 | Official injury reports | 2021-22 → today, hourly (15-min in 2026-27) | exact publish time printed on each PDF |
-| Polymarket US | live order book only; NBA = full-game winner only; fee coeff 0.095 | live; **no history** — must be collected forward |
+| Polymarket US | live order book only; NBA = winner, full-game spreads & totals, halves/quarters, team totals, player props (combos enabled); taker fee coeff 0.095 | live; **no history** — must be collected forward |
 | Polymarket international | public price history | proxy only, not the execution venue |
 
 Market benchmark mix (`outputs/audit/market_source_mix.csv`): seasons 2008-09 → 2021-22 use the
