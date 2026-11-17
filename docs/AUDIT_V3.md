@@ -31,7 +31,7 @@ Dependencies: pandas, numpy, scikit-learn, LightGBM, SciPy, matplotlib, nba_api,
 | ESPN core odds | 2022-23 → today; 14 providers cached raw, **only DraftKings ingested** | close = at tip; open = time unknown; 2022-23 single line |
 | Official injury reports | 2021-22 → today, hourly (15-min in 2026-27) | exact publish time printed on each PDF |
 | Polymarket US | live order book only; NBA = full-game winner only; fee coeff 0.095 | live; **no history** — must be collected forward |
-| Polymarket international | public price history | proxy only, not the user's venue |
+| Polymarket international | public price history | proxy only, not the execution venue |
 
 Market benchmark mix (`outputs/audit/market_source_mix.csv`): seasons 2008-09 → 2021-22 use the
 Kaggle consensus line; 2022-23 → today use DraftKings. ML available for every game except 6 in 2025-26.

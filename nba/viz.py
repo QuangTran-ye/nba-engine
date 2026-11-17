@@ -170,7 +170,6 @@ def dashboard():
           ("Test spread ROI (close)", pct(b[(b.split == 'test') & (b.line == 'close') & (b.market == 'spread')].roi.iloc[0]), "after -110 vig")]
     tiles = "".join(f"<div class='tile'><div class='k'>{k}</div><div class='v'>{v}</div><div class='s'>{s_}</div></div>" for k, v, s_ in kp)
     doc = f"""<title>NBA Model Backtest</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <style>
 /* layout: single column report — verdict, KPI tiles, tables, then charts */
