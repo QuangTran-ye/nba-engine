@@ -1,0 +1,54 @@
+[
+  {
+    "version": "v1",
+    "created": "2026-11-17T13:49:49",
+    "stage": "tuned_on_validation",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets"
+  },
+  {
+    "version": "v1",
+    "created": "2026-11-17T14:05:19",
+    "stage": "final",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets",
+    "predictions_sha256": "b17f86daec881f56f2bed7a23fb36d5fe239140e2fc66546f57c64df403cba26",
+    "note": "frozen config run once over test + holdout"
+  }
+]

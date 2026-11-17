@@ -1,0 +1,59 @@
+[
+  {
+    "version": "v2",
+    "created": "2026-11-17",
+    "stage": "tuned_on_validation",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets",
+    "injuries": true,
+    "first_predict_season": 2022,
+    "note": "v1 config unchanged + injury-report features (official NBA reports, latest published >=60 min before tip). No retuning. Test seasons were already seen once under v1, so v2's test result is a second look; the clean evaluation of v2 is forward tracking from 2026-11-17."
+  },
+  {
+    "version": "v2",
+    "created": "2026-11-17T14:56:21",
+    "stage": "final",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets",
+    "injuries": true,
+    "first_predict_season": 2022,
+    "note": "frozen config run once over test + holdout",
+    "predictions_sha256": "3fb7851cf6784622a69717d55e421f3be58df1553e6cb75e2deeab722a9b3728"
+  }
+]

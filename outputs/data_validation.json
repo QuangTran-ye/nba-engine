@@ -1,0 +1,307 @@
+{
+  "games_per_season": {
+    "2008": 1230,
+    "2009": 1230,
+    "2010": 1230,
+    "2011": 1230,
+    "2012": 990,
+    "2013": 1229,
+    "2014": 1230,
+    "2015": 1230,
+    "2016": 1230,
+    "2017": 1230,
+    "2018": 1230,
+    "2019": 1230,
+    "2020": 1059,
+    "2021": 1080,
+    "2022": 1230,
+    "2023": 1230,
+    "2024": 1230,
+    "2025": 1230,
+    "2026": 1230,
+    "2027": 205
+  },
+  "box_minutes_not_240_or_OT": [],
+  "totals_outside_150_300": 44,
+  "odds_coverage": [
+    {
+      "season": 2008,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1228
+    },
+    {
+      "season": 2009,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2010,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1229
+    },
+    {
+      "season": 2011,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1229
+    },
+    {
+      "season": 2012,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 990,
+      "spread": 990,
+      "total": 990,
+      "ml": 990
+    },
+    {
+      "season": 2013,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1229,
+      "spread": 1229,
+      "total": 1229,
+      "ml": 1222
+    },
+    {
+      "season": 2014,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1229
+    },
+    {
+      "season": 2015,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2016,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2017,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2018,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2019,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2020,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1059,
+      "spread": 1058,
+      "total": 1059,
+      "ml": 1059
+    },
+    {
+      "season": 2021,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1080,
+      "spread": 1080,
+      "total": 1080,
+      "ml": 1080
+    },
+    {
+      "season": 2022,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1228,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2023,
+      "source": "espn",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1227,
+      "ml": 1230
+    },
+    {
+      "season": 2023,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 664
+    },
+    {
+      "season": 2024,
+      "source": "espn",
+      "line_type": "close",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2024,
+      "source": "espn",
+      "line_type": "open",
+      "games": 1137,
+      "spread": 1137,
+      "total": 1137,
+      "ml": 1137
+    },
+    {
+      "season": 2024,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 0
+    },
+    {
+      "season": 2025,
+      "source": "espn",
+      "line_type": "close",
+      "games": 1230,
+      "spread": 1229,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2025,
+      "source": "espn",
+      "line_type": "open",
+      "games": 1230,
+      "spread": 1229,
+      "total": 1230,
+      "ml": 1230
+    },
+    {
+      "season": 2025,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 0
+    },
+    {
+      "season": 2026,
+      "source": "espn",
+      "line_type": "close",
+      "games": 1220,
+      "spread": 1220,
+      "total": 1220,
+      "ml": 1218
+    },
+    {
+      "season": 2026,
+      "source": "espn",
+      "line_type": "close_assumed",
+      "games": 10,
+      "spread": 9,
+      "total": 9,
+      "ml": 6
+    },
+    {
+      "season": 2026,
+      "source": "espn",
+      "line_type": "open",
+      "games": 1228,
+      "spread": 1228,
+      "total": 1228,
+      "ml": 1223
+    },
+    {
+      "season": 2026,
+      "source": "kaggle_sbr",
+      "line_type": "close_assumed",
+      "games": 1230,
+      "spread": 1230,
+      "total": 1230,
+      "ml": 0
+    },
+    {
+      "season": 2027,
+      "source": "espn",
+      "line_type": "close",
+      "games": 205,
+      "spread": 205,
+      "total": 205,
+      "ml": 205
+    },
+    {
+      "season": 2027,
+      "source": "espn",
+      "line_type": "open",
+      "games": 205,
+      "spread": 205,
+      "total": 205,
+      "ml": 205
+    }
+  ],
+  "odds_spread_out_of_range": 0,
+  "odds_total_out_of_range": 1,
+  "ml_spread_sign_conflicts": 32,
+  "ml_spread_checked": 24688,
+  "kaggle_vs_espn_open": {
+    "games": 3595,
+    "spread_mean_abs_diff": 1.726488592097941,
+    "spread_exact_match": 0.16717663421418638,
+    "total_mean_abs_diff": 3.0677329624478444,
+    "total_exact_match": 0.08984700973574408
+  },
+  "kaggle_vs_espn_close": {
+    "games": 3680,
+    "spread_mean_abs_diff": 0.26610491981516715,
+    "spread_exact_match": 0.6701086956521739,
+    "total_mean_abs_diff": 0.38057065217391306,
+    "total_exact_match": 0.5986413043478261
+  }
+}
