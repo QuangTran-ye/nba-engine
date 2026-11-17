@@ -40,8 +40,12 @@ TEAM_NAMES = {
     "phoenixsuns": 1610612756, "portlandtrailblazers": 1610612757, "sacramentokings": 1610612758,
     "sanantoniospurs": 1610612759, "torontoraptors": 1610612761, "utahjazz": 1610612762,
     "washingtonwizards": 1610612764}
-TEAM_RE = re.compile("|".join(sorted(TEAM_NAMES, key=len, reverse=True)), re.I)
-PLAYER_RE = re.compile(r"([A-Za-z][A-Za-z'.\-]*(?:,[A-Za-z'.\-]+)+)\s+(" + "|".join(STATUSES) + r")\b")
+# team names match with or without spaces ("Milwaukee Bucks" in 2021-23 reports, "MilwaukeeBucks" later)
+TEAM_RE = re.compile("|".join("".join(re.escape(c) + r"\s*" for c in n)
+                              for n in sorted(TEAM_NAMES, key=len, reverse=True)), re.I)
+PREFIX_RE = re.compile(r"\d{2}/\d{2}/\d{4}|\d{2}:\d{2}\s*\(ET\)|\b[A-Z]{2,3}@[A-Z]{2,3}\b")
+# player = everything (incl. spaces, suffix commas) up to the status word: "Brown Jr., Troy Questionable"
+PLAYER_RE = re.compile(r"^\s*([^\W\d_][\w'.\- ]*?,[\w'.,\- ]*?)\s*(" + "|".join(STATUSES) + r")\b")  # \w: accents (López)
 DATE_RE = re.compile(r"\b(\d{2}/\d{2}/\d{4})\b")
 HEAD_RE = re.compile(r"Injury Report:\s*(\d{2}/\d{2}/\d{2})\s+(\d{2}:\d{2})\s*(AM|PM)")
 
@@ -102,12 +106,16 @@ def parse_pdf(path):
                 d = DATE_RE.search(line)
                 if d:
                     gdate = datetime.strptime(d[1], "%m/%d/%Y").strftime("%Y-%m-%d")
-                t = TEAM_RE.search(line.replace(" ", ""))
+                cut = 0
+                for m in PREFIX_RE.finditer(line):
+                    cut = max(cut, m.end())
+                t = TEAM_RE.search(line, cut)
                 if t:
-                    team = TEAM_NAMES[t[0].lower()]
-                for m in PLAYER_RE.finditer(line):
-                    if gdate and team:
-                        rows.append((gdate, team, m[1], report_key(m[1]), m[2]))
+                    team = TEAM_NAMES[re.sub(r"\s", "", t[0]).lower()]
+                    cut = t.end()
+                m = PLAYER_RE.match(line[cut:])
+                if m and gdate and team:
+                    rows.append((gdate, team, m[1].strip(), report_key(m[1]), m[2]))
     df = pd.DataFrame(rows, columns=["game_date", "team_id", "player_raw", "player_key", "status"])
     df["published"] = published.strftime("%Y-%m-%d %H:%M") if published else None
     df["file"] = path.name

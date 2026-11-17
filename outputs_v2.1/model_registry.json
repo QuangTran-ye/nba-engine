@@ -1,0 +1,59 @@
+[
+  {
+    "version": "v2.1",
+    "created": "2026-11-17",
+    "stage": "tuned_on_validation",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets",
+    "injuries": true,
+    "first_predict_season": 2022,
+    "note": "v2 config unchanged; bug fix only: injury-report parser dropped every row in 2021-22 and 2022-23 reports (names with spaces) and accented names. v2 (sha 3fb7851c) kept in outputs_v2 for the record."
+  },
+  {
+    "version": "v2.1",
+    "created": "2026-11-17T15:11:25",
+    "stage": "final",
+    "feature_params": {
+      "halflife": 24.0
+    },
+    "ensemble_members": [
+      "logreg"
+    ],
+    "hyperparams": {},
+    "bet_config": {
+      "sigma_margin": 13.763572746823776,
+      "sigma_total": 18.974404025204972,
+      "thr_ml": 0.06,
+      "thr_spread": 0.0,
+      "thr_total": 0.04
+    },
+    "valid_seasons": [
+      2020,
+      2021,
+      2022
+    ],
+    "selection_rule": "lowest validation log loss; thresholds = best validation ROI with >=150 bets",
+    "injuries": true,
+    "first_predict_season": 2022,
+    "note": "frozen config run once over test + holdout",
+    "predictions_sha256": "37cdffba2096fcd2e60c168e363b7f352c4d74411be4fa392f13b0157411165a"
+  }
+]
